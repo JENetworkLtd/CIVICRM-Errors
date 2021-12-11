@@ -1,0 +1,49 @@
+[error] 
+$Fatal Error Details = array:3 [
+  "message" => "You do not have permission to access this page."
+  "code" => null
+  "exception" => CRM_Core_Exception {#22709
+    -errorData: array:1 [
+      "error_code" => 0
+    ]
+    #cause: null
+    -_trace: null
+    #message: "You do not have permission to access this page."
+    #code: 0
+    #file: "public_html/wp-content/plugins/civicrm/civicrm/CRM/Utils/System/WordPress.php"
+    #line: 605
+    trace: {
+      /wp-content/plugins/civicrm/civicrm/CRM/Utils/System/WordPress.php:605 {
+        ›   status_header(403);
+        ›   throw new CRM_Core_Exception(ts('You do not have permission to access this page.'));
+        › }
+      }
+      /public_html/wp-content/plugins/civicrm/civicrm/CRM/Utils/System.php:60 { …}
+      /public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php:233 { …}
+      /public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php:69 { …}
+      /public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php:36 { …}
+      /public_html/wp-content/plugins/civicrm/civicrm.php:1169 { …}
+      /public_html/wp-includes/class-wp-hook.php:303 { …}
+      /public_html/wp-includes/class-wp-hook.php:327 { …}
+      /public_html/wp-includes/plugin.php:518 { …}
+      /public_html/wp-includes/class-wp.php:763 { …}
+      /public_html/wp-includes/functions.php:1291 { …}
+      /public_html/wp-blog-header.php:16 { …}
+      /public_html/index.php:17 { …}
+    }
+  }
+]
+
+ [debug] $backTrace = #0 /public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Error.php(433): CRM_Core_Error::backtrace("backTrace", TRUE)
+#1 /public_html/wp-content/plugins/civicrm/civicrm/CRM/Core/Invoke.php(39): CRM_Core_Error::handleUnhandledException(Object(CRM_Core_Exception))
+#2 /public_html/wp-content/plugins/civicrm/civicrm.php(1169): CRM_Core_Invoke::invoke((Array:3))
+#3 /public_html/wp-includes/class-wp-hook.php(303): CiviCRM_For_WordPress->invoke(Object(WP))
+#4 /public_html/wp-includes/class-wp-hook.php(327): WP_Hook->apply_filters(NULL, (Array:1))
+#5 /public_html/wp-includes/plugin.php(518): WP_Hook->do_action((Array:1))
+#6 /public_html/wp-includes/class-wp.php(763): do_action_ref_array("wp", (Array:1))
+#7 /public_html/wp-includes/functions.php(1291): WP->main("")
+#8 /public_html/wp-blog-header.php(16): wp()
+#9 /public_html/index.php(17): require("/public_html/wp-blog-header.php")
+#10 {main}
+
+
